@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Erichson Synthetische Biologie</title>
+    <script src="https://kit.fontawesome.com/9afe4df8e9.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: gray;
+            font: 80% "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+        }
+
+        .main {
+            display: block;
+            width: 987px;
+            height: 6000px;
+            margin: 13px auto 8px;
+            background-color: aliceblue;
+            border-radius: 10px;
+            padding-left: 20px;
+            padding-top: 15px;
+            font-family: Arial, serif;
+            font-size: 12pt;
+
+        }
+
+        .text {
+            float: left;
+            width: 800px;
+            text-align: justify;
+            line-height: 1.5em;
+            padding: 21px 55px 34px 28px;
+            background-color: #fff;
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        a:link {
+            color: black !important;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            background-color: lightgray;
+            font-size: 110%;
+        }
+
+        a:visited {
+            color: cornflowerblue;
+        }
+
+        .image {
+            background-color: lightgray;
+            padding: 5px;
+            width: 800px;
+            height: auto;
+            display: block;
+            border-radius: 5px;
+
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+        }
+
+        .imageText {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+
+        .collapsible {
+            background-color: rgba(245, 214, 130, 1);
+            color: black;
+            cursor: pointer;
+            padding: 18px;
+            width: 800px;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 30px;
+            border-radius: 5px;
+        }
+
+        .active, .collapsible:hover {
+            background-color: rgb(233, 181, 40);
+        }
+
+        .content {
+            background-color: rgba(245, 214, 130, 0.30);
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+
+    <h1 style="margin-left: 20px">Das minimal Genom</h1>
+    <div class="text">
+
+
+        <h4> Text & Bilder: Felix Erichson</h4>
+        <h4>Auf der Suche nach dem minimal Genom.</h4>
+        <p>
+
+            Die Genomgröße eines Organismus ist von verschiedenen Komponenten abhängig. So haben Organismen größere
+            Genome, wenn sie unterschiedlichen Umwelteinflüssen ausgesetzt werden. Dadurch entstehen Gene, die nur unter
+            bestimmten Lebensbedingungen aktiv sein müssen. Organismen mit kleineren Genomen leben in Bereichen mit
+            konstanten Umwelteinflüssen und sind optimal an diese angepasst. Hier hat eine Genomreduzierung von
+            stattgefunden. Das kleinste bekannte Genom besitzt M. genitalium mit 525 Genen <a
+                href="https://science.sciencemag.org/content/286/5447/2165.abstract" target="_blank">[Hutchison et.
+            al., 1999]</a>.
+
+        </p>
+
+        <h4>Wie groß muss ein Genom sein, um bei optimalen Lebensbedingungen überleben zu können? </h4>
+
+        <p>
+
+            Wenn ein Organismus unter optimalen Lebensbedingungen lebt, dann sind konstante und dem Organismus
+            zugeschnittene Umwelteinflüsse gemeint. Hierbei stehen immer ausreichend Nährstoffe zur Verfügung, die
+            Temperatur, der Druck und die Luftzusammensetzung sind konstant. Dadurch muss sich der Organismus nicht an
+            wechselnde Lebensbedingungen anpassen. Unter solchen Bedingungen benötigt ein Organismus nur eine minimale
+            Anzahl an Genen, um lebensfähig zu sein.
+
+        </p>
+        <p>
+
+            Mit der Frage, wie viele Gene es braucht, damit eine Zelle leben kann, beschäftigten sich unter anderem die
+            Autoren Mushegain und Koonin im Jahr 1996. Sie verglichen die Genome von M. genitalium und H. influenzae und
+            kamen zu dem Ergebnis, dass das minimale Set an Genen bei 256 liegen könnte. Dies ist allerdings nur eine
+            theoretische Annäherung an ein Minimalgenom <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC38373/"
+                                                           target="_blank">[Mushegain
+            & Koonin, 1996]</a>.
+
+        </p>
+        <p>
+
+            Eine Arbeit aus dem Jahr 2016 näherte sich der Frage nach dem Minimalgenom nicht nur theoretisch, sondern
+            praktisch im Labor. Die Arbeitsgruppe um Craig Venter stellte einen Arbeitsablauf vor, mit dem man zum einen
+            Bakterien mit einem synthetischen Genom herstellen kann und zum anderen, wie man diese Genome auch
+            optimieren kann. Durch eine solche Optimierung schufen sie einen lebensfähigen Organismus mit dem kleinsten
+            Genom der Welt, kleiner noch als das von M. genitalium <a
+                href="https://science.sciencemag.org/content/351/6280/aad6253" target="_blank">[Hutchison et. al.,
+            2016]</a>. Wie dieser
+            Arbeitsablauf funktioniert und was die
+            Ergebnisse dieser Studie sind soll, im Folgendem zusammengefasst erläutert werden.
+
+        </p>
+
+
+        <h4>Wie stellt man einen synthetischen Organismus her?</h4>
+
+        <p>
+
+            Der Prozess, um einen synthetischen Organismus herzustellen, ist die Grundlage, um ein möglichst kleines
+            Genom zu finden. Dieser Prozess ist ein Zyklus, der aus drei Schritten aufgebaut ist. Der erste Schritt ist
+            das Genom-Design am Computer. Danach wird das Genom synthetisch hergestellt, welches anschließend durch eine
+            Genomtransplantation in einen Organismus getestet werden kann. Dieser Zyklus erinnert an einen genetischen
+            Algorithmus <a href="#info_genet_alg">(Infobox 1)</a>. Dieser Prozess wurde entwickelt, als der erste
+            synthetische Organismus JCVsyn1.0 erschaffen wurde <a
+                href="https://science.sciencemag.org/content/329/5987/52" target="_blank">[Gibson et. al., 2010]</a>.
+            (TedTalk von Craig Venter zum Thema <a
+                href="https://www.ted.com/talks/craig_venter_on_the_verge_of_creating_synthetic_life#t-357685"
+                target="_blank"><i class="fas fa-external-link-alt"></i></a> ). Das Genom von <i>JCVsyn1.0</i> ist eine
+            Kopie von
+            M.mycoides und wurde komplett synthetisch hergestellt. Dieses Genom war später auch die Grundlage der
+            Genomreduzierung, da sich der synthetische Organismus schneller teilt, als <i>M. genitalium</i> und somit
+            der Testvorgang effizienter gestaltet werden kann.
+
+        </p>
+
+        <button class="collapsible" id="info_genet_alg">Infobox 1: genetische Algorithmen</button>
+        <div class="content">
+            <p>Genetische Algorithmen finden in der Informatik und Mathematik Anwendung. Sie
+                versuchen auf Grundlage biologischer Methoden ein Parameterset zu optimieren. Man geht wie folgt vor:
+                Zuerst wird eine Population erstellt und den Parametern unterschiedliche Werte zugeordnet. Jede einzelne
+                Wertkombination ist ein Individuum. In der Biologie hat auch jeder Mensch eine leicht unterschiedliche
+                Zusammensetzung von Basen im Genom. Dann wird Selektionsdruck ausgeübt. In der Mathematik nimmt man hier
+                Energiefunktionen, welche anhand der Werte ein Ergebnis berechnen und dieser Wert sollte dann besser als
+                ein vorgegebener Schwellwert sein. Ist er das nicht, wird das Individuum aus der Population entfernt.
+                Die verbleibenden Individuen erfahren dann Mutation oder Rekombination. Das heißt, es werden zufällig
+                Werte verändert oder vertauscht. Und dann wird wieder selektiert. Dieser Prozess wird so lange
+                wiederholt, bis eine optimale Lösung erreicht ist.
+            </p>
+            <p>
+                Das Problem dabei ist, dass man sich nie sicher sein kann, ob es noch weitere Kombinationen gibt, die
+                besser sind. So auch bei der Suche nach dem Minimalgenom. Es kann sein, dass eine komplett andere
+                Kombination von Reduzierungen zu einem viel kleinerem Genom führt. Deshalb spricht man auch immer von
+                Annäherung oder Approximation, da eine optimale Lösung nur durch unendliche Zeit und unendliche
+                Ressourcen mit 100%iger Sicherheit gefunden werden kann <a
+                    href="https://link.springer.com/book/10.1007/978-3-658-09958-9#toc" target="_blank">[Weicker,
+                2015]</a>.
+            </p>
+        </div>
+
+        <h3>Schtitt 1: DESIGN</h3>
+        <div class="image" id="image_design">
+
+            <img id="design" src="design.svg"
+                 style=" background-color: white; width: 100%; height: auto; display: block;">
+
+            <p class="imageText">
+                <b>Abbildung 1: Design</b> <a href="design.svg" target="_blank"><i
+                    class="far fa-images"></i></a> <br>
+                Durch die kombination von Erkentnissen aus der Literatur und bereits vorhandenen bzw. selbst erstellen
+                Transposonmutagenesedaten können am Rechner Genome designed werden.
+            </p>
+        </div>
+        <p>
+            Die Grundlage für das Design bildet ein bereits existierendes Genom. Bei der beschriebenen Arbeit von
+            Hutchison et. al. 2016 war das das synthetische Genom JCVsyn1.0. Dieses Genom wurde in acht Segmente
+            (Kassetten)
+            unterteilt, die einzeln verändert und dann mit intakten Segmenten kombiniert werden können. Ein kurzes
+            Beispiel: Man nehme ein Segment und reduziere einige Gene, das Segment wird kleiner. Dieses veränderte
+            Segment kombiniert man dann mit den restlichen sieben unveränderten Segmenten. Daraus entsteht dann ein
+            reduziertes Genom. Dieses wird getestet und man kann erkennen, ob die Reduzierung in dem Segment sinnvoll
+            war oder nicht. So kann man die Segmente einzeln verändern und frei kombinieren. Die Kombinationen und
+            Reduzierungsmöglichkeiten scheinen dabei aber unendlich. Deshalb nimmt man experimentelle Daten und
+            Literaturwissen zu Hilfe <a href="#image_design">(Abbildung 1)</a>. Hierbei gibt es zwei grundlegende
+            Herangehensweisen. Die erste ist, sich nur auf bereits existierende Literatur und experimentelle Daten zu
+            stützen oder zweitens selbst experimentelle Daten erzeugen. Bei der ersten Methode kann man nur am PC ein
+            hypothetisches Genom designen. Dabei nimmt man bereits existierende Daten von
+            Transposonmutageneseexperimenten <a href="#trans">(Infobox 2)</a>. Bei der zweiten Variante führt man selbst
+            globale Transposonmutagenese am Genom von JCVsyn1.0 durch. Dabei schaltet man Gene aus und beobachtet, wie
+            der Organismus darauf reagiert. Dadurch lassen sich Gene identifizieren, die wichtig, weniger wichtig oder
+            nicht wichtig für das Überleben scheinen.
+        </p>
+        <p>
+            Beim Design kommt es nicht nur darauf an, ein Genom zu erstellen. Es ist vor allem wichtig, die DNA so zu
+            designen, dass man auch die darauffolgenden Schritte bearbeiten kann. Im nächsten Schritt, in dem das
+            synthetische Genom gebildet werden soll, benötigt man zunächst Oligonukleotide
+            <img src="Oligo.svg" style="width: auto; height: 12px">.
+            Das sind kleine synthetische DNA-Abschnitte, die nicht größer als 30 Basenpaare (bp) sind. Diese
+            Oligonukleotide müssen so designt werden, dass sie zu einem ganzen Genom zusammengesetzt werden können <a
+                href="https://science.sciencemag.org/content/351/6280/aad6253" target="_blank">[Hutchison et. al.,
+            2016]</a>.
+
+        </p>
+
+        <button class="collapsible" id="trans">Infobox 2: Trasnposonmutagenese</button>
+        <div class="content">
+            <p>
+                Ein Transposon oder auch springendes Gen ist ein Gen, welches seine Position im Genom ändern kann.
+                Dadurch kann es zu Mutationen in den bestimmten Genen kommen, da sich durch die Positionsänderung des
+                Transposons die Abfolge der Basen ändert und das Gen nicht mehr richtig funktioniert. Diesen Prozess
+                kann man auch gezielt einsetzen, um Mutationen in Genen zu verursachen, die sogenannte
+                Transposonmutagenenese. Mit dieser Methode können nun Gene ausgeschaltet werden und man kann damit den
+                Einfluss des ausgeschalteten Gens auf den Organismus prüfen. Mit diesen Erkenntnissen können dann die
+                Gene im Genom einer Wichtigkeit zugeordnet werden und man kann im Weiteren entscheiden, welche Gene wohl
+                wichtig, weniger wichtig oder nicht wichtig für den Organismus sind <a
+                    href="https://science.sciencemag.org/content/286/5447/2165.abstract" target="_blank">[Hutchison et.
+                al., 1999]</a>.
+            </p>
+        </div>
+
+        <h3>Schritt 2. BUILD</h3>
+
+        <p>
+            In diesem Schritt soll das designte Genom synthetisiert werden. Dabei erfolgt zuerst die Synthetisierung der
+            Oligonukleotide. Diese kann man bequem bestellen oder mit den nötigen Geräten auch selbst herstellen. Die
+            kleinen Nukleotidsequenzen werden nun mit Hilfe der Polymerasekettenreaktion zu größeren Abschnitten mit
+            einer Länge von von 1400 bp zusammengesetzt <img src="second_fragment.svg"
+                                                             style="width: auto; height: 12px">. Fünf dieser Fragmente
+            werden zusammengefügt und in einen Vektor
+            (Plasmid) eingefügt. Dabei entstehen 7000 bp große Fragmente <img src="third_fragment.svg"
+                                                                              style="width: auto; height: 12px">. Davon
+            werden 15 Stück in Hefe zu einem der
+            acht Segmente zusammengesetzt <img src="kassette.svg" style="width: auto; height: 12px">. Nun kann man wie
+            eingangs erwähnt die acht großen Fragmente kombinieren und
+            in Hefe zu einem ganzen Genom zusammensetzen <img src="syn_genom.svg" style="width: auto; height: 12px">.
+            Einen Überblick über diesen Prozess gibt auch die <a
+                href="#image_build">Abbildung
+            2</a>.
+            Zwischen den Schritten wird das Genom auch kontrolliert, also sequenziert, um Fehler hier zu vermeiden. Auch
+            wurden Fehlerkorrekturverfahren in diesem Prozess eingeführt und optimiert <a
+                href="https://science.sciencemag.org/content/351/6280/aad6253" target="_blank">[Hutchison et. al.,
+            2016]</a>.
+        </p>
+
+        <div class="image" id="image_build">
+
+            <img id="build" src="Build.svg"
+                 style=" background-color: white; width: 100%; height: auto; display: block;">
+
+            <p class="imageText">
+                <b>Abbildung 2: Design</b> <a href="Build.svg" target="_blank"><i
+                    class="far fa-images"></i></a> <br>
+                Mit einem designten Genom können Oligonukleotide synthetisiert werden. Diese werden dann durch
+                verschiedene Assembly Schritte zu einem gesamten Genom zusammengesetzt.
+            </p>
+        </div>
+
+        <h3>Schritt 3: TEST</h3>
+
+        <p>
+            Um die Funktionalität des Genoms zu prüfen, muss man das Genom in einen anderen Organismus transplantieren.
+            Dafür isoliert man das fertige Genom aus der Hefe und überträgt dieses dann in einen Organismus, welcher
+            auch ein Genom besitzt. Das synthetische Genom besitzt Gene, die dafür sorgen, dass das Ursprunggenom aus
+            dem Organismus entfernt wird. Dann übernimmt das transplantierte Genom die Kontrolle über die Zelle. Den
+            Organismus, der als Hülle verwendet wird, nennt man auch Chassis, im Beispiel ist der Chassis M.capricolum.
+            Der synthetische Organismus kann nun in einer Petrischale ausgestrichen werden. Wenn der Organismus wächst,
+            können dabei die Wachstumsrate, Größe und Aussehen (Phänotyp) geprüft werden <a href="#image_test">(Abbildung
+            3)</a> <a
+                href="https://science.sciencemag.org/content/351/6280/aad6253" target="_blank">[Hutchison et. al.,
+            2016]</a>.
+        </p>
+
+        <div class="image" id="image_test">
+
+            <img id="test" src="Test.svg"
+                 style=" background-color: white; width: 100%; height: auto; display: block;">
+
+            <p class="imageText">
+                <b>Abbildung 3: Genomtransplantation & TEST</b> <a href="Test.svg" target="_blank"><i
+                    class="far fa-images"></i></a>
+                <br>
+                Das synthetische Genom kann in ein Chassis transplantiert werden. Dabei wird das vorhandene Genom des
+                Chassis entfernt und das synthetische Genom übernimmt die Kontrolle der Hülle. Der dabei entstandene
+                synthetische Organismus kann nun auf Phänotypische Merkmale untersucht werden.
+            </p>
+        </div>
+
+        <p>
+            Mit dem vorgestellten Zyklus konnte eine Methode optimiert werden, mit der man die Genomreduzierung
+            durchführen kann. Auf der Suche nach dem Minimalgenom wurden zwei Ansätze verfolgt. Als erstes hatte man
+            versucht, ein Genom allein mit Informationen aus der Literatur und durch die vorhandenen Daten zu erstellen.
+            Diese Herangehensweise ergab zwar ein sehr kleines Genom aber keinen überlebensfähigen Organismus. Ein
+            lebensfähiger Organismus wurde hier mit einem reduzierten Fragment in Kombination mit sieben intakten
+            Fragmenten erreicht.
+        </p>
+
+        <p>
+            Der andere Designansatz war erfolgreicher und führte zu einem Genom indem alle acht Segmente reduziert
+            vorliegen und auch die Genanzahl kleiner ist als das kleineste bekannte Genom. Die Designgröße liegt hierbei
+            bei 473 Genen und 531.000 bp. Dieses Genom konnte auch einen lebensfähigen Organismus vorbringen und wurde
+            JCVIsyn3.0 benannt <a
+                href="https://science.sciencemag.org/content/351/6280/aad6253" target="_blank">[Hutchison et. al.,
+            2016]</a>.
+        </p>
+
+        <h3>JCVIsyn3.0 der Organismus mit dem kleinsten Genom der Welt</h3>
+        <p>
+            Der Organismus hat ein Genom mit der Größe von 531 kb und 473 Genprodukten und ist somit 50 kb kleiner als
+            das Genom von M. genitalium und nur halb so groß wie das Genom von JCVsyn1.0. Wenn man die Funktionen der
+            Gene betrachtet, die JCVIsyn3.0 besitzt, so sind 17% für den Stoffwechsel der Zelle verantwortlich. 18% der
+            Gene sind mit der Zellmembran assoziiert. Da der Organismus kaum eigene Nährstoffe erstellen kann, muss er
+            diese aus dem Medium beziehen und dafür braucht er eine ganze Reihe an Transportern in der Zellmembran. 41%,
+            der größte Anteil, codieren für das Ablesen der genetischen Information und der Bildung von Proteinen. 7%
+            der Gene sind mit der Erhaltung der Erbinformation assoziiert und von 17% der genetischen Information ist
+            die Funktion unbekannt. Das bedeutet, dass 17% offenbar essentieller Gene unerforscht sind.
+        </p>
+
+        <p>
+            Das Erscheinungsbild des Organismus JCVIsyn3.0 unterscheidet sich in einigen Punkten von JCVsyn1.0. Zum
+            einen ist die Koloniegröße von JCVIsyn3.0 kleiner als die von JCVsyn1.0, was auch auf eine geringere
+            Wachstumsrate hinweist. Die Verdopplungszeit von JCVIsyn3.0 ist drei Mal so lang wie die seines genetischen
+            Vorbilds, aber immer noch viel geringer als die von M. genitalium. Außerdem bildet JCVIsyn3.0 in späten
+            Wachstumsphasen verfilzte Sedimente aus, welche als ausgedehnte Netzwerke von langen fadenförmigen
+            Strukturen beschrieben werden. Im Vergleich zeigen sich also einige Unterschiede zwischen den beiden
+            synthetischen Organismen. Dennoch führt dieses Minimalgenom zu einem teilungsfähigen Organismus und das
+            Potential dieser Erkenntnis ist noch längst nicht ausgeschöpft <a
+                href="https://science.sciencemag.org/content/351/6280/aad6253" target="_blank">[Hutchison et. al.,
+            2016]</a>.
+        </p>
+
+        <h3>Und jetzt?</h3>
+
+        <p>
+            Neben der Suche nach weiteren noch kleineren Genomen sollte man sich mit den unbekannten 17% der Gene
+            beschäftigen, um das eingangs erwähnte Ziel zu erreichen, jede Funktion eines einfachen Organismus zu
+            kennen. Das Potential dieser Arbeit liegt aber auch in der vorgestellten optimierten Methode synthetische
+            Organismen herzustellen. So ist es möglich, synthetische Genome herzustellen, die bestimmte Funktionen
+            erfüllen können. Es ist sozusagen eine Pipeline zur Herstellung von genetischem Lego, welches man dann zu
+            Genomen zusammenbaut. Wenn die Methodik zum Design synthetischer Genome weiter optimiert wird und dadurch
+            immer weniger Tests durchgeführt werden müssen, scheinen die Möglichkeiten fast grenzenlos. Das gilt nicht
+            nur für die Forschung, sondern auch in der Industrie und möglicherweise sogar in privaten Haushalten.
+        </p>
+
+        <h3><i class="fas fa-book"></i> Literaturnachweise:</h3>
+        <ul>
+            <li>
+                <b><a
+                        href="https://science.sciencemag.org/content/329/5987/52" target="_blank">[Gibson et. al.,
+                    2010]</a></b> – Gibson, Daniel G.; Glass, John I.; Lartigue, Carole; Noskov, Vladimir
+                N.; Chuang, Ray-Yuan; Algire, Mikkel A. et al. (2010): Creation of a bacterial cell controlled by a
+                chemically synthesized genome. In: Science (New York, N.Y.) 329 (5987), S. 52–56. DOI:
+                10.1126/science.1190719.
+            </li>
+            <li>
+                <b><a
+                        href="https://science.sciencemag.org/content/351/6280/aad6253" target="_blank">[Hutchison et.
+                    al.,
+                    2016]</a></b> – Hutchison, Clyde A.; Chuang, Ray-Yuan; Noskov, Vladimir N.;
+                Assad-Garcia, Nacyra; Deerinck, Thomas J.; Ellisman, Mark H. et al. (2016): Design and synthesis of a
+                minimal bacterial genome. In: Science (New York, N.Y.) 351 (6280), aad6253. DOI:
+                10.1126/science.aad6253.
+            </li>
+            <li>
+                <b><a
+                        href="https://science.sciencemag.org/content/286/5447/2165.abstract" target="_blank">[Hutchison
+                    et.
+                    al., 1999]</a>.</b> – Hutchison, C. A.; Peterson, S. N.; Gill, S. R.; Cline, R. T.; White,
+                O.; Fraser, C. M. et al. (1999): Global transposon mutagenesis and a minimal Mycoplasma genome. In:
+                Science (New York, N.Y.) 286 (5447), S. 2165–2169. DOI: 10.1126/science.286.5447.2165.
+            </li>
+            <li>
+                <b><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC38373/"
+                      target="_blank">[Mushegain
+                    & Koonin, 1996]</a></b> -
+                Mushegian, A. R.; Koonin, E. V. (1996):
+                A minimal gene set for cellular life derived by comparison of complete bacterial genomes.
+                In: Proceedings of the National Academy of Sciences of the United States of America 93 (19), S.
+                10268–10273. DOI: 10.1073/pnas.93.19.10268.
+            </li>
+            <li>
+                <b><a
+                        href="https://link.springer.com/book/10.1007/978-3-658-09958-9#toc" target="_blank">[Weicker,
+                    2015]</a></b> Weicker, Karsten (2015): Evolutionäre Algorithmen. Wiesbaden: Springer Fachmedien
+                Wiesbaden.
+            </li>
+        </ul>
+
+        <h3><i class="fas fa-book"></i> Weiterführende Literatur für Interessierte:</h3>
+
+        <ul>
+            <li>
+                <b><a href="https://science.sciencemag.org/content/325/5948/1693.long" target="_blank">Hefeengeneering
+                    (Synthese, Assembly, Cloning von Bakteriengenomen in Hefe)</a></b><br>
+                Lartigue, Carole; Vashee, Sanjay; Algire, Mikkel A.; Chuang, Ray-Yuan; Benders, Gwynedd A.; Ma, Li et
+                al. (2009): Creating bacterial strains from genomes that have been cloned and engineered in yeast. In:
+                Science (New York, N.Y.) 325 (5948), S. 1693–1696. DOI: 10.1126/science.1173759.
+            </li>
+            <li>
+                <b><a href="https://science.sciencemag.org/content/317/5838/632.long" target="_blank">Genomtransplantation</a></b><br>
+                Lartigue, Carole; Glass, John I.; Alperovich, Nina; Pieper, Rembert; Parmar, Prashanth P.; Hutchison,
+                Clyde A. et al. (2007): Genome transplantation in bacteria: changing one species to another. In: Science
+                (New York, N.Y.) 317 (5838), S. 632–638. DOI: 10.1126/science.1144622.
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+
+<script>
+
+    // https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapsible_animate
+    let coll = document.getElementsByClassName("collapsible");
+    let i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            let content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+
+</script>
+
+</body>
+</html>
