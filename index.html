@@ -13,7 +13,7 @@
         .main {
             display: block;
             width: 987px;
-            height: 6000px;
+            height: 7000px;
             margin: 13px auto 8px;
             background-color: aliceblue;
             border-radius: 10px;
@@ -84,10 +84,23 @@
             margin-right: auto;
             margin-top: 30px;
             border-radius: 5px;
+
         }
 
         .active, .collapsible:hover {
             background-color: rgb(233, 181, 40);
+        }
+
+        .collapsible:after {
+            content: '\002B';
+            color: black;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .active:after {
+            content: "\2212";
         }
 
         .content {
@@ -115,7 +128,7 @@
             Die Genomgröße eines Organismus ist von verschiedenen Komponenten abhängig. So haben Organismen größere
             Genome, wenn sie unterschiedlichen Umwelteinflüssen ausgesetzt werden. Dadurch entstehen Gene, die nur unter
             bestimmten Lebensbedingungen aktiv sein müssen. Organismen mit kleineren Genomen leben in Bereichen mit
-            konstanten Umwelteinflüssen und sind optimal an diese angepasst. Hier hat eine Genomreduzierung von
+            konstanten Umwelteinflüssen und sind optimal an diese angepasst. Hier hat eine Genomreduzierung
             stattgefunden. Das kleinste bekannte Genom besitzt <i>M. genitalium</i> mit 525 Genen <a
                 href="https://science.sciencemag.org/content/286/5447/2165.abstract" target="_blank">[Hutchison et.
             al., 1999]</a>.
@@ -136,7 +149,8 @@
         <p>
 
             Mit der Frage, wie viele Gene es braucht, damit eine Zelle leben kann, beschäftigten sich unter anderem die
-            Autoren Mushegain und Koonin im Jahr 1996. Sie verglichen die Genome von <i>M. genitalium</i> und <i>H. influenzae</i> und
+            Autoren Mushegain und Koonin im Jahr 1996. Sie verglichen die Genome von <i>M. genitalium</i> und <i>H.
+            influenzae</i> und
             kamen zu dem Ergebnis, dass das minimale Set an Genen bei 256 liegen könnte. Dies ist allerdings nur eine
             theoretische Annäherung an ein Minimalgenom <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC38373/"
                                                            target="_blank">[Mushegain
@@ -146,14 +160,14 @@
         <p>
 
             Eine Arbeit aus dem Jahr 2016 näherte sich der Frage nach dem Minimalgenom nicht nur theoretisch, sondern
-            praktisch im Labor. Die Arbeitsgruppe um Craig Venter stellte einen Arbeitsablauf vor, mit dem man zum einen
-            Bakterien mit einem synthetischen Genom herstellen kann und zum anderen, wie man diese Genome auch
+            praktisch im Labor. Die Arbeitsgruppe um Craig Venter stellte einen Arbeitsablauf vor, mit dem man zum Einen
+            Bakterien mit einem synthetischen Genom herstellen kann und zum Anderen, wie man diese Genome auch
             optimieren kann. Durch eine solche Optimierung schufen sie einen lebensfähigen Organismus mit dem kleinsten
             Genom der Welt, kleiner noch als das von <i>M. genitalium</i> <a
                 href="https://science.sciencemag.org/content/351/6280/aad6253" target="_blank">[Hutchison et. al.,
             2016]</a>. Wie dieser
             Arbeitsablauf funktioniert und was die
-            Ergebnisse dieser Studie sind soll, im Folgendem zusammengefasst erläutert werden.
+            Ergebnisse dieser Studie sind, soll im Folgendem zusammengefasst erläutert werden.
 
         </p>
 
@@ -173,8 +187,9 @@
                 href="https://www.ted.com/talks/craig_venter_on_the_verge_of_creating_synthetic_life#t-357685"
                 target="_blank"><i class="fas fa-external-link-alt"></i></a> ). Das Genom von <i>JCVIsyn1.0</i> ist eine
             Kopie von
-            <i>M. mycoides</i> und wurde komplett synthetisch hergestellt. Dieses Genom war später auch die Grundlage der
-            Genomreduzierung, da sich der synthetische Organismus schneller teilt, als <i>M. genitalium</i> und somit
+            <i>M. mycoides</i> und wurde komplett synthetisch hergestellt. Dieses Genom war später auch die Grundlage
+            der
+            Genomreduzierung, da sich der synthetische Organismus schneller teilt als <i>M. genitalium</i> und somit
             der Testvorgang effizienter gestaltet werden kann.
 
         </p>
@@ -183,7 +198,7 @@
         <div class="content">
             <p>Genetische Algorithmen finden in der Informatik und Mathematik Anwendung. Sie
                 versuchen auf Grundlage biologischer Methoden ein Parameterset zu optimieren. Man geht wie folgt vor:
-                Zuerst wird eine Population erstellt und den Parametern unterschiedliche Werte zugeordnet. Jede einzelne
+                Zuerst werden eine Population erstellt und den Parametern unterschiedliche Werte zugeordnet. Jede einzelne
                 Wertkombination ist ein Individuum. In der Biologie hat auch jeder Mensch eine leicht unterschiedliche
                 Zusammensetzung von Basen im Genom. Dann wird Selektionsdruck ausgeübt. In der Mathematik nimmt man hier
                 Energiefunktionen, welche anhand der Werte ein Ergebnis berechnen und dieser Wert sollte dann besser als
@@ -213,7 +228,7 @@
                 <b>Abbildung 1: Design</b> <a href="design.svg" target="_blank"><i
                     class="far fa-images"></i></a> <br>
                 Durch die Kombination von Erkenntnissen aus der Literatur und bereits vorhandenen bzw. selbst erstellen
-                Transposonmutagenesedaten können am Rechner Genome designed werden.
+                Transposonmutagenesedaten, können am Rechner Genome designed werden.
             </p>
         </div>
         <p>
@@ -227,11 +242,12 @@
             war oder nicht. So kann man die Segmente einzeln verändern und frei kombinieren. Die Kombinationen und
             Reduzierungsmöglichkeiten scheinen dabei aber unendlich. Deshalb nimmt man experimentelle Daten und
             Literaturwissen zu Hilfe <a href="#image_design">(Abbildung 1)</a>. Hierbei gibt es zwei grundlegende
-            Herangehensweisen. Die erste ist, sich nur auf bereits existierende Literatur und experimentelle Daten zu
-            stützen oder zweitens selbst experimentelle Daten erzeugen. Bei der ersten Methode kann man nur am PC ein
+            Herangehensweisen. Die Erste ist, sich nur auf bereits existierende Literatur und experimentelle Daten zu
+            stützen oder zweitens, selbst experimentelle Daten erzeugen. Bei der ersten Methode kann man nur am PC ein
             hypothetisches Genom designen. Dabei nimmt man bereits existierende Daten von
             Transposonmutageneseexperimenten <a href="#trans">(Infobox 2)</a>. Bei der zweiten Variante führt man selbst
-            globale Transposonmutagenese am Genom von <i>JCVIsyn1.0</i> durch. Dabei schaltet man Gene aus und beobachtet, wie
+            globale Transposonmutagenese am Genom von <i>JCVIsyn1.0</i> durch. Dabei schaltet man Gene aus und
+            beobachtet, wie
             der Organismus darauf reagiert. Dadurch lassen sich Gene identifizieren, die wichtig, weniger wichtig oder
             nicht wichtig für das Überleben scheinen.
         </p>
@@ -247,7 +263,7 @@
 
         </p>
 
-        <button class="collapsible" id="trans">Infobox 2: Trasnposonmutagenese</button>
+        <button class="collapsible" id="trans">Infobox 2: Transposonmutagenese</button>
         <div class="content">
             <p>
                 Ein Transposon oder auch springendes Gen ist ein Gen, welches seine Position im Genom ändern kann.
@@ -275,8 +291,8 @@
             (Plasmid) eingefügt. Dabei entstehen 7000 bp große Fragmente <img src="third_fragment.svg"
                                                                               style="width: auto; height: 12px">. Davon
             werden 15 Stück in Hefe zu einem der
-            acht Segmente zusammengesetzt <img src="kassette.svg" style="width: auto; height: 12px">. Nun kann man wie
-            eingangs erwähnt die acht großen Fragmente kombinieren und
+            acht Segmente zusammengesetzt <img src="kassette.svg" style="width: auto; height: 12px">. Nun kann man, wie
+            eingangs erwähnt, die acht großen Fragmente kombinieren und
             in Hefe zu einem ganzen Genom zusammensetzen <img src="syn_genom.svg" style="width: auto; height: 12px">.
             Einen Überblick über diesen Prozess gibt auch die <a
                 href="#image_build">Abbildung
@@ -351,8 +367,10 @@
         <h3><i>JCVIsyn3.0</i> der Organismus mit dem kleinsten Genom der Welt</h3>
         <p>
             Der Organismus hat ein Genom mit der Größe von 531 kb und 473 Genprodukten und ist somit 50 kb kleiner als
-            das Genom von <i>M. genitalium</i> und nur halb so groß wie das Genom von <i>JCVIsyn1.0</i>. Wenn man die Funktionen der
-            Gene betrachtet, die <i>JCVIsyn3.0</i> besitzt, so sind 17% für den Stoffwechsel der Zelle verantwortlich. 18% der
+            das Genom von <i>M. genitalium</i> und nur halb so groß wie das Genom von <i>JCVIsyn1.0</i>. Wenn man die
+            Funktionen der
+            Gene betrachtet, die <i>JCVIsyn3.0</i> besitzt, so sind 17% für den Stoffwechsel der Zelle verantwortlich.
+            18% der
             Gene sind mit der Zellmembran assoziiert. Da der Organismus kaum eigene Nährstoffe erstellen kann, muss er
             diese aus dem Medium beziehen und dafür braucht er eine ganze Reihe an Transportern in der Zellmembran. 41%,
             der größte Anteil, codieren für das Ablesen der genetischen Information und der Bildung von Proteinen. 7%
@@ -361,11 +379,14 @@
         </p>
 
         <p>
-            Das Erscheinungsbild des Organismus <i>JCVIsyn3.0</i> unterscheidet sich in einigen Punkten von JCVsyn1.0. Zum
-            einen ist die Koloniegröße von <i>JCVIsyn3.0</i> kleiner als die von <i>JCVIsyn1.0</i>, was auch auf eine geringere
-            Wachstumsrate hinweist. Die Verdopplungszeit von <i>JCVIsyn3.0</i> ist drei Mal so lang wie die seines genetischen
-            Vorbilds, aber immer noch viel geringer als die von M. genitalium. Außerdem bildet <i>JCVIsyn3.0</i> in späten
-            Wachstumsphasen verfilzte Sedimente aus, welche als ausgedehnte Netzwerke von langen fadenförmigen
+            Das Erscheinungsbild des Organismus <i>JCVIsyn3.0</i> unterscheidet sich in einigen Punkten von JCVsyn1.0.
+            Zum Einen ist die Koloniegröße von <i>JCVIsyn3.0</i> kleiner als die von <i>JCVIsyn1.0</i>, was auch auf eine
+            geringere
+            Wachstumsrate hinweist. Die Verdopplungszeit von <i>JCVIsyn3.0</i> ist drei Mal so lang wie die seines
+            genetischen
+            Vorbilds, aber immer noch viel geringer als die von M. genitalium. Außerdem bildet <i>JCVIsyn3.0</i> in
+            späten
+            Wachstumsphasen verfilzte Sedimente aus, welche als ausgedehnte Netzwerke von langen, fadenförmigen
             Strukturen beschrieben werden. Im Vergleich zeigen sich also einige Unterschiede zwischen den beiden
             synthetischen Organismen. Dennoch führt dieses Minimalgenom zu einem teilungsfähigen Organismus und das
             Potential dieser Erkenntnis ist noch längst nicht ausgeschöpft <a
@@ -376,9 +397,9 @@
         <h3>Und jetzt?</h3>
 
         <p>
-            Neben der Suche nach weiteren noch kleineren Genomen sollte man sich mit den unbekannten 17% der Gene
+            Neben der Suche nach weiteren noch kleineren Genomen, sollte man sich mit den unbekannten 17% der Gene
             beschäftigen, um das eingangs erwähnte Ziel zu erreichen, jede Funktion eines einfachen Organismus zu
-            kennen. Das Potential dieser Arbeit liegt aber auch in der vorgestellten optimierten Methode synthetische
+            kennen. Das Potential dieser Arbeit liegt aber auch in der vorgestellten optimierten Methode, synthetische
             Organismen herzustellen. So ist es möglich, synthetische Genome herzustellen, die bestimmte Funktionen
             erfüllen können. Es ist sozusagen eine Pipeline zur Herstellung von genetischem Lego, welches man dann zu
             Genomen zusammenbaut. Wenn die Methodik zum Design synthetischer Genome weiter optimiert wird und dadurch
